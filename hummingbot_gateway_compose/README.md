@@ -29,8 +29,9 @@ The output should be: `Docker Compose version v2.17.2` or similar. Ensure that y
 
 Clone this repo to your machine and go to the folder:
 ```
-git clone https://github.com/hummingbot/deploy-examples.git
+git clone https://github.com/yourtrading-ai/deploy-examples.git
 cd deploy-examples/hummingbot_gateway_compose
+git checkout feat/mango-markets-2
 ```
 
 Alternatively, copy the `docker-compose.yml` file to a directory on your machine where you want to store your Hummingbot files. 

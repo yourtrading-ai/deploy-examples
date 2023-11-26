@@ -2,7 +2,7 @@ version: "3.9"
 services:
   hummingbot:
     container_name: hummingbot
-    image: hummingbot/hummingbot:latest
+    image: mlguys/robotter.ai:latest-hummingbot
     volumes:
       - "./hummingbot_files/conf:/home/hummingbot/conf"
       - "./hummingbot_files/conf/connectors:/home/hummingbot/conf/connectors"
@@ -24,7 +24,7 @@ services:
 
   gateway:
     container_name: gateway
-    image: hummingbot/gateway:latest
+    image: mlguys/robotter.ai:latest-gateway
     ports:
       - "15888:15888"
       - "8080:8080"
