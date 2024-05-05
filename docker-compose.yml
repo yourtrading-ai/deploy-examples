@@ -1,17 +1,18 @@
 services:
-  bot_1:
-    container_name: bot_1
-    image: hummingbot/hummingbot:development
+  BITCOIN:
+    container_name: BITCOIN
+    image: mlguys/robotter.ai:hummingbot-the-house-special
     volumes:
-      - ./credentials/master_account:/home/hummingbot/conf
-      - ./credentials/master_account/connectors:/home/hummingbot/conf/connectors
-      - ./instances/bot_1/logs:/home/hummingbot/logs
-      - ./instances/bot_1/data:/home/hummingbot/data
+      - ./credentials/BITCOIN:/home/hummingbot/conf
+      - ./credentials/BITCOIN/connectors:/home/hummingbot/conf/connectors
+      - ./instances/BITCOIN/logs:/home/hummingbot/logs
+      - ./instances/BITCOIN/data:/home/hummingbot/data
       - ./conf/scripts:/home/hummingbot/conf/scripts
       - ./conf/controllers:/home/hummingbot/conf/controllers
+      - ./conf/strategies:/home/hummingbot/conf/strategies
     environment:
       - CONFIG_PASSWORD=a
-#      - CONFIG_FILE_NAME=v2_generic_with_controllers.py
+      - CONFIG_FILE_NAME=conf_pure_mm_BITCOIN.yml
 #      - SCRIPT_CONFIG=conf_v2_generic_with_controllers_1.yml
     logging:
       driver: "json-file"
@@ -20,19 +21,20 @@ services:
           max-file: 5
     tty: true
     stdin_open: true
-  bot_2:
-    container_name: bot_2
-    image: hummingbot/hummingbot:development
+  DOG:
+    container_name: DOG
+    image: mlguys/robotter.ai:hummingbot-the-house-special
     volumes:
-      - ./credentials/master_account:/home/hummingbot/conf
-      - ./credentials/master_account/connectors:/home/hummingbot/conf/connectors
-      - ./instances/bot_2/logs:/home/hummingbot/logs
-      - ./instances/bot_2/data:/home/hummingbot/data
+      - ./credentials/DOG:/home/hummingbot/conf
+      - ./credentials/DOG/connectors:/home/hummingbot/conf/connectors
+      - ./instances/DOG/logs:/home/hummingbot/logs
+      - ./instances/DOG/data:/home/hummingbot/data
       - ./conf/scripts:/home/hummingbot/conf/scripts
       - ./conf/controllers:/home/hummingbot/conf/controllers
+      - ./conf/strategies:/home/hummingbot/conf/strategies
     environment:
       - CONFIG_PASSWORD=a
-#      - CONFIG_FILE_NAME=v2_generic_with_controllers.py
+      - CONFIG_FILE_NAME=conf_pure_mm_DOG.yml
 #      - SCRIPT_CONFIG=conf_v2_generic_with_contorllers_2.yml
     logging:
       driver: "json-file"
@@ -41,4 +43,135 @@ services:
           max-file: 5
     tty: true
     stdin_open: true
-
+  INTERGALACTIC:
+    container_name: INTERGALACTIC
+    image: mlguys/robotter.ai:hummingbot-the-house-special
+    volumes:
+      - ./credentials/INTERGALACTIC:/home/hummingbot/conf
+      - ./credentials/INTERGALACTIC/connectors:/home/hummingbot/conf/connectors
+      - ./instances/INTERGALACTIC/logs:/home/hummingbot/logs
+      - ./instances/INTERGALACTIC/data:/home/hummingbot/data
+      - ./conf/scripts:/home/hummingbot/conf/scripts
+      - ./conf/controllers:/home/hummingbot/conf/controllers
+      - ./conf/strategies:/home/hummingbot/conf/strategies
+    environment:
+      - CONFIG_PASSWORD=a
+      - CONFIG_FILE_NAME=conf_pure_mm_INTERGALACTIC.yml
+#      - SCRIPT_CONFIG=conf_v2_generic_with_controllers_1.yml
+    logging:
+      driver: "json-file"
+      options:
+          max-size: "10m"
+          max-file: 5
+    tty: true
+    stdin_open: true
+  MEME:
+    container_name: MEME
+    image: mlguys/robotter.ai:hummingbot-the-house-special
+    volumes:
+      - ./credentials/MEME:/home/hummingbot/conf
+      - ./credentials/MEME/connectors:/home/hummingbot/conf/connectors
+      - ./instances/MEME/logs:/home/hummingbot/logs
+      - ./instances/MEME/data:/home/hummingbot/data
+      - ./conf/scripts:/home/hummingbot/conf/scripts
+      - ./conf/controllers:/home/hummingbot/conf/controllers
+      - ./conf/strategies:/home/hummingbot/conf/strategies
+    environment:
+      - CONFIG_PASSWORD=a
+      - CONFIG_FILE_NAME=conf_pure_mm_MEME.yml
+#      - SCRIPT_CONFIG=conf_v2_generic_with_controllers_1.yml
+    logging:
+      driver: "json-file"
+      options:
+          max-size: "10m"
+          max-file: 5
+    tty: true
+    stdin_open: true
+  RSIC:
+    container_name: RSIC
+    image: mlguys/robotter.ai:hummingbot-the-house-special
+    volumes:
+      - ./credentials/RSIC:/home/hummingbot/conf
+      - ./credentials/RSIC/connectors:/home/hummingbot/conf/connectors
+      - ./instances/RSIC/logs:/home/hummingbot/logs
+      - ./instances/RSIC/data:/home/hummingbot/data
+      - ./conf/scripts:/home/hummingbot/conf/scripts
+      - ./conf/controllers:/home/hummingbot/conf/controllers
+      - ./conf/strategies:/home/hummingbot/conf/strategies
+    environment:
+      - CONFIG_PASSWORD=a
+      - CONFIG_FILE_NAME=conf_pure_mm_RSIC.yml
+#      - SCRIPT_CONFIG=conf_v2_generic_with_controllers_1.yml
+    logging:
+      driver: "json-file"
+      options:
+          max-size: "10m"
+          max-file: 5
+    tty: true
+    stdin_open: true
+  SATOSHI:
+    container_name: SATOSHI
+    image: mlguys/robotter.ai:hummingbot-the-house-special
+    volumes:
+      - ./credentials/SATOSHI:/home/hummingbot/conf
+      - ./credentials/SATOSHI/connectors:/home/hummingbot/conf/connectors
+      - ./instances/SATOSHI/logs:/home/hummingbot/logs
+      - ./instances/SATOSHI/data:/home/hummingbot/data
+      - ./conf/scripts:/home/hummingbot/conf/scripts
+      - ./conf/controllers:/home/hummingbot/conf/controllers
+      - ./conf/strategies:/home/hummingbot/conf/strategies
+    environment:
+      - CONFIG_PASSWORD=a
+      - CONFIG_FILE_NAME=conf_pure_mm_SATOSHI.yml
+#      - SCRIPT_CONFIG=conf_v2_generic_with_controllers_1.yml
+    logging:
+      driver: "json-file"
+      options:
+          max-size: "10m"
+          max-file: 5
+    tty: true
+    stdin_open: true
+  THETICKER:
+    container_name: THETICKER
+    image: mlguys/robotter.ai:hummingbot-the-house-special
+    volumes:
+      - ./credentials/THETICKER:/home/hummingbot/conf
+      - ./credentials/THETICKER/connectors:/home/hummingbot/conf/connectors
+      - ./instances/THETICKER/logs:/home/hummingbot/logs
+      - ./instances/THETICKER/data:/home/hummingbot/data
+      - ./conf/scripts:/home/hummingbot/conf/scripts
+      - ./conf/controllers:/home/hummingbot/conf/controllers
+      - ./conf/strategies:/home/hummingbot/conf/strategies
+    environment:
+      - CONFIG_PASSWORD=a
+      - CONFIG_FILE_NAME=conf_pure_mm_THETICKER.yml
+#      - SCRIPT_CONFIG=conf_v2_generic_with_controllers_1.yml
+    logging:
+      driver: "json-file"
+      options:
+          max-size: "10m"
+          max-file: 5
+    tty: true
+    stdin_open: true
+  WANKO:
+    container_name: WANKO
+    image: mlguys/robotter.ai:hummingbot-the-house-special
+    volumes:
+      - ./credentials/WANKO:/home/hummingbot/conf
+      - ./credentials/WANKO/connectors:/home/hummingbot/conf/connectors
+      - ./instances/WANKO/logs:/home/hummingbot/logs
+      - ./instances/WANKO/data:/home/hummingbot/data
+      - ./conf/scripts:/home/hummingbot/conf/scripts
+      - ./conf/controllers:/home/hummingbot/conf/controllers
+      - ./conf/strategies:/home/hummingbot/conf/strategies
+    environment:
+      - CONFIG_PASSWORD=a
+      - CONFIG_FILE_NAME=conf_pure_mm_WANKO.yml
+#      - SCRIPT_CONFIG=conf_v2_generic_with_controllers_1.yml
+    logging:
+      driver: "json-file"
+      options:
+          max-size: "10m"
+          max-file: 5
+    tty: true
+    stdin_open: true
